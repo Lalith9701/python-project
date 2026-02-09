@@ -1,4 +1,4 @@
-# utils/datasets.py
+
 import os, csv, json
 import networkx as nx
 
@@ -29,7 +29,7 @@ def load_knapsack(name):
         reader = csv.reader(f)
         for r in reader:
             if not r: continue
-            # expect id,value,weight
+
             items.append((r[0], int(r[1]), int(r[2])))
     return items, cap
 
