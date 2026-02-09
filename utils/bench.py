@@ -1,4 +1,4 @@
-# utils/bench.py
+
 import time, statistics
 from algorithms import greedy, d_p, backtracking, branch_and_bound, divide_and_conquer
 from utils.datasets import load_tsp, load_knapsack, load_graph
