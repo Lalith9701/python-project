@@ -1,4 +1,4 @@
-# app.py
+
 import os, time, json
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
@@ -64,7 +64,7 @@ def run():
 
         elif problem == 'knapsack':
             items, capacity = load_knapsack(dataset)
-            # items: list of (id, value, weight)
+
             if method == 'greedy':
                 picked, val = greedy.knapsack_greedy(items, capacity)
             elif method == 'd_p':
@@ -100,7 +100,7 @@ def benchmark():
     res = run_benchmarks_for_problem(problem, dataset, methods)
     return jsonify(res)
 
-# serve uploaded data files
+
 @app.route('/data/<path:filename>')
 def serve_data(filename):
     return send_from_directory(DATA_DIR, filename, as_attachment=True)
