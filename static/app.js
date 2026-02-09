@@ -1,4 +1,4 @@
-// static/app.js
+
 async function loadDatasets(){
   const res = await fetch('/datasets');
   const list = await res.json();
