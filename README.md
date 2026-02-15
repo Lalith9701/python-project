@@ -14,6 +14,6 @@ The project demonstrates multiple strategies/approaches to solving a problem, ma
 - Easy to extend and customize
 - Virtual environment support (`.venv`)
 
----
+
 
 
