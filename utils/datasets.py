@@ -1,15 +1,15 @@
-
+#data page
 import os, csv, json
 import networkx as nx
 
 BASE = os.path.dirname(os.path.dirname(__file__))
 DATA_DIR = os.path.join(BASE, 'data')
 os.makedirs(DATA_DIR, exist_ok=True)
-
+#list set
 def list_datasets():
     files = os.listdir(DATA_DIR)
     return [f for f in files if f.lower().endswith(('.csv','.json'))]
-
+#tsp
 def load_tsp(name):
     path = os.path.join(DATA_DIR, name)
     points = []
@@ -20,7 +20,7 @@ def load_tsp(name):
             x = float(r[0]); y = float(r[1])
             points.append((x,y))
     return points
-
+#knapsack
 def load_knapsack(name):
     path = os.path.join(DATA_DIR, name)
     items=[]
@@ -32,7 +32,7 @@ def load_knapsack(name):
 
             items.append((r[0], int(r[1]), int(r[2])))
     return items, cap
-
+#graph
 def load_graph(name):
     path = os.path.join(DATA_DIR, name)
     G = nx.Graph()
