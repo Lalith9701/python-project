@@ -20,7 +20,7 @@ def knapsack_dp(items: List[Tuple[str,int,int]], capacity: int):
             w -= items[i-1][2]
     picked.reverse()
     return picked, dp[n][capacity]
-
+#tsp held karp
 def tsp_held_karp(points):
     n = len(points)
     if n == 0: return [], 0.0
@@ -49,6 +49,6 @@ def tsp_held_karp(points):
         cost = C[(full ^ 1, j)] + dist[j][0]
         if cost < best_cost:
             best_cost = cost; last = j
-    # reconstruct path (simple approximate)
-    # here we return only cost and None tour for large n to avoid complexity
+    # reconstruct path ,
+    # here we return only cost and None tour for large n to avoid complexityies
     return None, best_cost
