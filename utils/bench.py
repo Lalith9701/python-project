@@ -1,4 +1,4 @@
-
+#bench page
 import time, statistics
 from algorithms import greedy, d_p, backtracking, branch_and_bound, divide_and_conquer
 from utils.datasets import load_tsp, load_knapsack, load_graph
@@ -40,7 +40,7 @@ def run_single(problem, method, dataset, runs=3):
         times.append(time.perf_counter() - start)
         result = out
     return {'method': method, 'time_mean': statistics.mean(times), 'time_stdev': statistics.stdev(times) if len(times)>1 else 0.0, 'result': result}
-
+#bench marks
 def run_benchmarks_for_problem(problem, dataset, methods):
     results=[]
     for m in methods:
