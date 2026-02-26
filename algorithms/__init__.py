@@ -1,4 +1,4 @@
-# algorithms/__init__.py
+# algorithms
 from . import greedy
 from . import d_p
 from . import backtracking
