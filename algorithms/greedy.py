@@ -1,4 +1,4 @@
-# algorithms/greedy.py
+# greedy.py
 import math
 from typing import List, Tuple
 
@@ -26,7 +26,7 @@ def tsp_nearest_neighbor(points: List[Tuple[float,float]]):
     return tour, cost
 
 def knapsack_greedy(items, capacity):
-    # items: list of (id, value, weight)
+    # items: list of
     items_sorted = sorted(items, key=lambda it: it[1]/it[2], reverse=True)
     total = 0
     picked = []
