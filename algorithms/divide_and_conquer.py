@@ -1,4 +1,4 @@
-# algorithms/divide_and_conquer.py
+# algorithms
 from typing import List, Tuple
 import math, itertools, bisect, time
 
@@ -12,7 +12,7 @@ def tour_cost(points, tour):
         c += euclidean(points[tour[i]], points[tour[i+1]])
     return c
 
-# simple partition + merge tsp as heuristic
+# simple partition + merge tsp & heuristic
 def tsp_divide_and_conquer(points: List[Tuple[float,float]], max_leaf: int = 8, time_limit=3.0):
     start = time.perf_counter()
     n = len(points)
@@ -24,7 +24,7 @@ def tsp_divide_and_conquer(points: List[Tuple[float,float]], max_leaf: int = 8, 
         # reuse greedy
         from algorithms.greedy import tsp_nearest_neighbor
         tour_local, cost = tsp_nearest_neighbor(pts)
-        # map back to global indices
+        # map back to global indices.
         if tour_local:
             return [idxs_local[i] for i in tour_local], cost
         return [], 0.0
@@ -44,7 +44,7 @@ def tsp_divide_and_conquer(points: List[Tuple[float,float]], max_leaf: int = 8, 
     if final_tour and final_tour[-1] != final_tour[0]:
         final_tour.append(final_tour[0])
     return final_tour, final_cost
-
+#splice tours
 def splice_tours(points, tourA, tourB):
     if not tourA: return tourB, tour_cost(points, tourB)
     if not tourB: return tourA, tour_cost(points, tourA)
