@@ -1,4 +1,3 @@
-#app page
 async function loadDatasets(){
   const res = await fetch('/datasets');
   const list = await res.json();
@@ -44,7 +43,6 @@ document.getElementById('benchBtn').addEventListener('click', async ()=>{
   document.getElementById('benchResult').innerText = 'Done. See chart.';
   drawBenchChart(j.results);
 });
-#function
 function drawBenchChart(results){
   const ctx = document.getElementById('benchChart').getContext('2d');
   const labels = results.map(r=>r.method);
