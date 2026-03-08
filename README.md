@@ -9,9 +9,9 @@ The project demonstrates multiple strategies/approaches to solving a problem, ma
 ---
 
 ## 🚀 Features
-- Multiple strategies implemented in Python
-- Modular project structure
-- Easy to extend and customize
+- Multiple strategies implemented in Python.
+- Modular project structure.
+- Easy to extend and customize.
 - Virtual environment support (`.venv`)
 
 
