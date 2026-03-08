@@ -1,4 +1,3 @@
-#app page
 import os, time, json
 from flask import Flask, render_template, request, jsonify, send_from_directory
 from werkzeug.utils import secure_filename
@@ -104,6 +103,6 @@ def benchmark():
 @app.route('/data/<path:filename>')
 def serve_data(filename):
     return send_from_directory(DATA_DIR, filename, as_attachment=True)
-#main
+
 if __name__ == '__main__':
     app.run(debug=True)
